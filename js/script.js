@@ -1,5 +1,5 @@
 jQuery(function () {
-    
-    alert ('test');
-    
+
+    // alert ('test');
+
  });
