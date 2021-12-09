@@ -11,3 +11,23 @@ $my_post = array(
 // Insert the post into the database
 wp_insert_post( $my_post );
 
+
+
+ 
+function create_custom_post_type() {
+ 
+$args = array(
+  'labels' => array(
+   'name' => __( 'news' ),
+   'singular_name' => __( 'News' )
+  ),
+  'public' => true,
+  'has_archive' => false,
+  'rewrite' => array('slug' => 'news'),
+ );
+ 
+register_post_type( 'news',$args);
+}
+
+add_action('init', 'create_custom_post_type');
+
