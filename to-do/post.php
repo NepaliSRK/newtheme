@@ -56,7 +56,7 @@ function tbare_wordpress_plugin_demo( $atts ) {
 
 
  
-function create_custom_post_type() {
+function custom_post_type() {
  
 $args = array(
   'labels' => array(
@@ -71,6 +71,6 @@ $args = array(
 register_post_type( 'news',$args);
 }
 
-add_action('init', 'create_custom_post_type');
+add_action('init', 'custom_post_type');
 
 add_shortcode( 'tbare-plugin-demo', 'tbare_wordpress_plugin_demo' );
