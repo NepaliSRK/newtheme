@@ -7,8 +7,10 @@ function load_stylesheets_scripts() {
   wp_register_style( 'style', get_template_directory_uri() . '/css/style.css', array(), false, 'all' );
   wp_enqueue_style( 'style' );
   
-  wp_register_script( 'customjs', get_template_directory_uri() . '/js/script.js', 'jquery', 1, true );
-  wp_enqueue_script( 'customjs' );
+  wp_register_script( 'news_script', get_template_directory_uri() . '/js/script.js', array('jquery')  );
+  
+  wp_localize_script( 'news_script', 'news_ajax_object', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
+  wp_enqueue_script( 'news_script' );
 }
 
 add_action( 'wp_enqueue_scripts', 'load_stylesheets_scripts' );
