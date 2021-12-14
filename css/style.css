@@ -41,7 +41,7 @@ header {
 
   }
 
-  ul{
+  .navigation{
     list-style-type: none;
     display: inline-flex;
     margin: 10px;
@@ -51,4 +51,6 @@ header {
     float: right;
   }
 
+
+  
  
