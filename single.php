@@ -6,6 +6,7 @@
 
 <?php if(have_posts()) : while(have_posts()) : the_post();?>
 
+<p class="post-info"><?php the_time('F jS, Y');?> | by <?php the_author();?></p>
     <?php the_content();?>
 
 <?php endwhile ; endif;?>
