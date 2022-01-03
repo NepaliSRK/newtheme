@@ -13,7 +13,5 @@ function news_add_post()
 }
 
 add_action("wp_ajax_news_add_post", "news_add_post");
-?>
 
-<?php add_post_meta( 68, '_color', 'red', true ); ?>
 
