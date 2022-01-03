@@ -47,10 +47,14 @@
           
           <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-            <h3><?php the_title(); ?></h3>
+            <h4><?php the_title(); ?></h4>
+            <br>
             <?php the_excerpt(); ?>
+
             <a href="<?php the_permalink(); ?>" class="btn btn-success">Read More</a>
-          
+                <a href="<?php echo get_delete_post_link( get_the_ID() ); ?> " class="btn btn-danger">Delete</a>
+            <br>
+            <br>
           <?php endwhile;
           endif;
           
