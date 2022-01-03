@@ -6,6 +6,7 @@ function news_add_post()
         'post_title'    => wp_strip_all_tags( $_POST['name'] ),
         'post_content'  => $_POST['message'],
         'post_status'   => 'publish',
+        'post_type'     => 'news',
     );
 
     wp_insert_post( $my_post );
