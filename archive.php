@@ -11,7 +11,7 @@
           <form action="" method="" class="ajax"
                   enctype="multipart/form-data">
 
-            <h3>Test Form</h3><br>
+            <h3>To-do List</h3><br>
 
             <label><b>Add Item</b></label>
 
@@ -40,6 +40,7 @@
           </form>
 
         </div>
+
         <?php
         } else {
           ?>
@@ -51,10 +52,11 @@
             <br>
             <?php the_excerpt(); ?>
 
-            <a href="<?php the_permalink(); ?>" class="btn btn-success">Read More</a>
+                <a href="<?php the_permalink(); ?>" class="btn btn-success">Read More</a>
+                <a href="<?php echo get_edit_post_link( get_the_ID() ); ?> " class="btn btn-success">Edit</a>
                 <a href="<?php echo get_delete_post_link( get_the_ID() ); ?> " class="btn btn-danger">Delete</a>
-            <br>
-            <br>
+                <br>
+                <br>
           <?php endwhile;
           endif;
           
